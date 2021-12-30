@@ -16,15 +16,13 @@ public abstract class ChessPiece extends Piece {
 		return color;
 	}
 
-	
 	public Chessposition getChessPosition() {
-		return Chessposition.fromPosition(position); 
+		return Chessposition.fromPosition(position);
 	}
-	
-	
+
 	protected boolean isThereOpponentPiece(Position position) {
-		ChessPiece p = (ChessPiece)getBoard().piece(position);
-		return p != null && p.getColor() != color; 
+		ChessPiece p = (ChessPiece) getBoard().piece(position);
+		return p != null && p.getColor() != color;
 	}
 
 }
